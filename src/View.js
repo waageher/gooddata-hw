@@ -11,11 +11,12 @@ class View {
 
     renderMonthDropdown(defaultMonth) {
         const months = this.controller.getMonths();
+        const monthNames = DateHelper.getMonthNames();
         return (
             <select data-type="month" defaultValue={months.defaultValue} onChange={(e) => this.controller.selectChange(e)}>
                 {
-                    DateHelper.getMonthNames().map(function(month, idx){
-                        return (<option key={idx} value={idx}>{month}</option>);
+                    months.values.map(function(month){
+                        return (<option key={month} value={month}>{monthNames[month]}</option>);
                     })
                 }
             </select>

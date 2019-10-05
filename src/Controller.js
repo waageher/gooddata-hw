@@ -20,7 +20,6 @@ class Controller extends Component {
     		month: this.getMonths().defaultValue,
     		year: this.getYears().defaultValue
     	};
-        console.log(this.state);
 
     	this.selectChange = this.selectChange.bind(this);
   	}

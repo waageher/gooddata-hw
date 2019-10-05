@@ -9,7 +9,7 @@ class View {
         this.controller = controller;
     }
 
-    renderMonthDropdown(defaultMonth) {
+    renderMonthDropdown() {
         const months = this.controller.getMonths();
         const monthNames = DateHelper.getMonthNames();
         return (
